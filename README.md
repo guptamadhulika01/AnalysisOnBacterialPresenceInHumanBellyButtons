@@ -23,7 +23,7 @@ Use Plotly.js to build interactive charts for your dashboard.
 
   * Use `otu_labels` for the text values.
 
-* Display the sample metadata from the route `/metadata/<sample>`
+* Display the sample metadata from the route `/metadata/<sample>`.
 
   * Display each key/value pair from the metadata JSON object somewhere on the page.
 
