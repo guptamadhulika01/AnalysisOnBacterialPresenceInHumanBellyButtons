@@ -1,6 +1,6 @@
 # import dependencies
 import os
-
+# Import pandas and numpy
 import pandas as pd;
 import numpy as np;
 
