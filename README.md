@@ -1,6 +1,6 @@
 # Analysis On Bacterial Presence In Belly Buttons
 
-Use Plotly.js to build interactive charts for your dashboard.
+Technologies Used: Python, Pandas, Plotly
 
 * Create a PIE chart that uses data from your samples route (`/samples/<sample>`) to display the top 10 samples.
 
