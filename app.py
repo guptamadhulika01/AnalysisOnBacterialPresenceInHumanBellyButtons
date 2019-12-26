@@ -3,7 +3,7 @@ import os
 # Import pandas and numpy
 import pandas as pd;
 import numpy as np;
-# Import SQLAlchemy
+# Import SQLAlchemy and required libraries
 import sqlalchemy;
 from sqlalchemy.ext.automap import automap_base;
 from sqlalchemy.orm import Session;
