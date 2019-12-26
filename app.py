@@ -19,6 +19,8 @@ app = Flask(__name__)
 # Database Setup
 #################################################
 
+#
+
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/bellybutton.sqlite"
 db = SQLAlchemy(app)
 
@@ -31,6 +33,7 @@ Base.prepare(db.engine, reflect=True)
 Samples_Metadata = Base.classes.sample_metadata
 Samples = Base.classes.samples
 
+#Add routes to pages
 
 @app.route("/")
 def index():
