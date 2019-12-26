@@ -1,13 +1,14 @@
+# import dependencies
 import os
-
+# Import pandas and numpy
 import pandas as pd;
 import numpy as np;
-
+# Import SQLAlchemy and required libraries
 import sqlalchemy;
 from sqlalchemy.ext.automap import automap_base;
 from sqlalchemy.orm import Session;
 from sqlalchemy import create_engine;
-
+#Import Flask, Jsonify and Render templates
 from flask import Flask, jsonify, render_template;
 from flask_sqlalchemy import SQLAlchemy;
 
@@ -17,6 +18,8 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
+
+#
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/bellybutton.sqlite"
 db = SQLAlchemy(app)
@@ -30,6 +33,7 @@ Base.prepare(db.engine, reflect=True)
 Samples_Metadata = Base.classes.sample_metadata
 Samples = Base.classes.samples
 
+#Add routes to pages
 
 @app.route("/")
 def index():
@@ -89,6 +93,7 @@ def samples(sample):
     # only keep rows with values above 1
     sample_data = df.loc[df[sample] > 1, ["otu_id", "otu_label", sample]]
 
+    
     # Sort by sample
     sample_data.sort_values(by=sample, ascending=False, inplace=True)
 
